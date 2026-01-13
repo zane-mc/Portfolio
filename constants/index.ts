@@ -265,7 +265,7 @@ export const SOCIALS = [
   {
     name: "Gmail",
     icon: SiGmail,
-    link: "mailto:zane.mclean.521@outlook.com",
+    link: "https://mail.google.com/mail/?view=cm&fs=1&to=zane.mclean.521@outlook.com",
   },
   {
     name: "GitHub",
@@ -286,7 +286,7 @@ export const FOOTER_DATA = [
       {
         name: "Gmail",
         icon: SiGmail,
-        link: "mailto:zane.mclean.521@outlook.com",
+        link: "https://mail.google.com/mail/?view=cm&fs=1&to=zane.mclean.521@outlook.com",
       },
       {
         name: "GitHub",

@@ -49,16 +49,30 @@ export const Navbar = () => {
         </div>
 
         <div className="flex flex-row gap-5">
-          {SOCIALS.map(({ link, name, icon: Icon }) => (
-            <Link
-              href={link}
-              target="_blank"
-              rel="noreferrer noopener"
-              key={name}
-            >
-              <Icon className="h-6 w-6 text-white" />
-            </Link>
-          ))}
+          {SOCIALS.map(({ link, name, icon: Icon }) => {
+            const isMailto = link.startsWith("mailto:");
+            if (isMailto) {
+              return (
+                <a
+                  href={link}
+                  key={name}
+                  aria-label={`Send email to ${name}`}
+                >
+                  <Icon className="h-6 w-6 text-white" />
+                </a>
+              );
+            }
+            return (
+              <Link
+                href={link}
+                target="_blank"
+                rel="noreferrer noopener"
+                key={name}
+              >
+                <Icon className="h-6 w-6 text-white" />
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>

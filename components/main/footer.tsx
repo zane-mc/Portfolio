@@ -15,18 +15,34 @@ export const Footer = () => {
               <h3 className="font-bold text-[16px]">{column.title}</h3>
               <div className="flex gap-16">
 
-              {column.data.map(({ icon: Icon, name, link }) => (
-                <Link
-                key={`${column.title}-${name}`}
-                href={link}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="flex flex-row items-center my-[15px]"
+              {column.data.map(({ icon: Icon, name, link }) => {
+                const isMailto = link.startsWith("mailto:");
+                if (isMailto) {
+                  return (
+                    <a
+                      key={`${column.title}-${name}`}
+                      href={link}
+                      className="flex flex-row items-center my-[15px]"
+                      aria-label={`Send email to ${name}`}
+                    >
+                      {Icon && <Icon />}
+                      <span className="text-[15px] ml-[6px]">{name}</span>
+                    </a>
+                  );
+                }
+                return (
+                  <Link
+                    key={`${column.title}-${name}`}
+                    href={link}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="flex flex-row items-center my-[15px]"
                   >
-                  {Icon && <Icon />}
-                  <span className="text-[15px] ml-[6px]">{name}</span>
-                </Link>
-              ))}
+                    {Icon && <Icon />}
+                    <span className="text-[15px] ml-[6px]">{name}</span>
+                  </Link>
+                );
+              })}
               </div>
             </div>
           ))}
