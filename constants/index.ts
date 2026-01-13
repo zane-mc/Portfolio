@@ -265,12 +265,12 @@ export const SOCIALS = [
   {
     name: "Gmail",
     icon: SiGmail,
-    link: "mailto:henry.dev333@gmail.com",
+    link: "mailto:zane.mclean.521@outlook.com",
   },
   {
     name: "GitHub",
     icon: RxGithubLogo,
-    link: "https://github.com/henry-dev333",
+    link: "https://github.com/zane-mc",
   },
   {
     name: "Linkedin",
@@ -286,12 +286,12 @@ export const FOOTER_DATA = [
       {
         name: "Gmail",
         icon: SiGmail,
-        link: "mailto:henry.dev333@gmail.com",
+        link: "mailto:zane.mclean.521@outlook.com",
       },
       {
         name: "GitHub",
         icon: RxGithubLogo,
-        link: "https://github.com/henry-dev333",
+        link: "https://github.com/zane-mc",
       },
       {
         name: "Linkedin",
@@ -363,5 +363,5 @@ export const NAV_LINKS = [
 ] as const;
 
 export const LINKS = {
-  sourceCode: "https://github.com/CodeByStella/Stella-Portfolio",
+  sourceCode: "https://github.com/zane-mc/Portfolio",
 };

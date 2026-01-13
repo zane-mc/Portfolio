@@ -48,11 +48,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/CodeByStella/Stella-Portfolio"
+    "url": "https://github.com/zane-mc/Portfolio"
   },
-  "homepage": "https://github.com/CodeByStella/Stella-Portfolio#readme",
+  "homepage": "https://github.com/zane-mc/Portfolio#readme",
   "bugs": {
-    "url": "https://github.com/CodeByStella/Stella-Portfolio/issues",
+    "url": "https://github.com/zane-mc/Portfolio/issues",
     "email": "okovtun747@gmail.com"
   },
   "dependencies": {
