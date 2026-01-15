@@ -51,12 +51,15 @@ export const Navbar = () => {
         <div className="flex flex-row gap-5">
           {SOCIALS.map(({ link, name, icon: Icon }) => {
             const isMailto = link.startsWith("mailto:");
-            if (isMailto) {
+            const isTel = link.startsWith("tel:");
+            if (isMailto || isTel) {
               return (
                 <a
                   href={link}
                   key={name}
-                  aria-label={`Send email to ${name}`}
+                  aria-label={isMailto ? `Send email to ${name}` : `Call ${name}`}
+                  className="!cursor-pointer hover:scale-110 transition-transform"
+                  style={{ cursor: 'pointer' }}
                 >
                   <Icon className="h-6 w-6 text-white" />
                 </a>
@@ -68,6 +71,8 @@ export const Navbar = () => {
                 target="_blank"
                 rel="noreferrer noopener"
                 key={name}
+                className="!cursor-pointer hover:scale-110 transition-transform"
+                style={{ cursor: 'pointer' }}
               >
                 <Icon className="h-6 w-6 text-white" />
               </Link>

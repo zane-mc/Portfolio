@@ -17,13 +17,15 @@ export const Footer = () => {
 
               {column.data.map(({ icon: Icon, name, link }) => {
                 const isMailto = link.startsWith("mailto:");
-                if (isMailto) {
+                const isTel = link.startsWith("tel:");
+                if (isMailto || isTel) {
                   return (
                     <a
                       key={`${column.title}-${name}`}
                       href={link}
-                      className="flex flex-row items-center my-[15px]"
-                      aria-label={`Send email to ${name}`}
+                      className="flex flex-row items-center my-[15px] !cursor-pointer hover:scale-110 transition-transform"
+                      style={{ cursor: 'pointer' }}
+                      aria-label={isMailto ? `Send email to ${name}` : `Call ${name}`}
                     >
                       {Icon && <Icon />}
                       <span className="text-[15px] ml-[6px]">{name}</span>
@@ -36,7 +38,8 @@ export const Footer = () => {
                     href={link}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="flex flex-row items-center my-[15px]"
+                    className="flex flex-row items-center my-[15px] !cursor-pointer hover:scale-110 transition-transform"
+                    style={{ cursor: 'pointer' }}
                   >
                     {Icon && <Icon />}
                     <span className="text-[15px] ml-[6px]">{name}</span>

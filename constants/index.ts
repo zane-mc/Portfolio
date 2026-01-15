@@ -5,7 +5,8 @@ import {
   FaSkype,
   FaGoogle,
   FaMailBulk,
-  FaMailchimp
+  FaMailchimp,
+  FaPhone
 } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import {
@@ -151,6 +152,12 @@ export const FRONTEND_SKILL = [
 export const BACKEND_SKILL = [
 
   {
+    skill_name: "Go",
+    image: "go.png",
+    width: 50,
+    height: 55,
+  },
+  {
     skill_name: "Firebase",
     image: "firebase.png",
     width: 50,
@@ -214,6 +221,12 @@ export const FULLSTACK_SKILL = [
     height: 80,
   },
   {
+    skill_name: "Nest.js",
+    image: "nest.png",
+    width: 65,
+    height: 80,
+  },
+  {
     skill_name: "Express.js",
     image: "express.png",
     width: 60,
@@ -225,6 +238,18 @@ export const OTHER_SKILL = [
   {
     skill_name: "Docker",
     image: "https://techstack-generator.vercel.app/docker-icon.svg",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "Kubernetes",
+    image: "https://techstack-generator.vercel.app/kubernetes-icon.svg",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "Jest",
+    image: "https://techstack-generator.vercel.app/jest-icon.svg",
     width: 70,
     height: 70,
   },
@@ -248,7 +273,7 @@ export const PROJECTS = [
   {
     title: "Quantum Research International",
     description:
-      'Developed secure Python and Django backend services with REST APIs to support defense mission tools, improving system performance and enabling reliable operational dashboards.',
+      'Worked as a Backend Developer creating secure, high-performance APIs and services for defense applications, enhancing system throughput, dashboard functionality, and access for thousands of users.',
     image: "/projects/3.png",
     link: "https://www.quantum-intl.com/about.html",
   },
@@ -275,7 +300,12 @@ export const SOCIALS = [
   {
     name: "Linkedin",
     icon: RxLinkedinLogo,
-    link: "https://linkedin.com/in/zane-mclean-7813773a5",
+    link: "https://linkedin.com/in/zane-mclean",
+  },
+  {
+    name: "Phone",
+    icon: FaPhone,
+    link: "tel:+17196423228",
   },
 ] as const;
 
@@ -296,7 +326,7 @@ export const FOOTER_DATA = [
       {
         name: "Linkedin",
         icon: RxLinkedinLogo,
-        link: "https://linkedin.com/in/zane-mclean-7813773a5",
+        link: "https://linkedin.com/in/zane-mclean",
       },
     ],
   },
